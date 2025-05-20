@@ -19,7 +19,10 @@ JOURNAL_FILE = "mood_journal.txt";
 # now lets cook a recording voice procedure
 
 def record_voice():
+    # opens microphone and starts listening
     with sr.Microphone() as source:
         print("Listening... Speak about your day.")
+    
+        # used to make ambident noise to listen
         recognizer.adjust_for_ambient_noise(source)
-        
+        audio = recognizer.listen(source, timeout= 5, phrase_time_limit= 10);

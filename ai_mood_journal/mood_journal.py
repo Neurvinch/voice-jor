@@ -40,3 +40,9 @@ def record_voice():
         except sr.RequestError as e:
             print(f"Error: {e}")
             return None;
+
+# now lets cook a procedure for emotion detection;
+
+def detect_emotion(text):
+    if not text:
+        return "neuteral", 0.0;w

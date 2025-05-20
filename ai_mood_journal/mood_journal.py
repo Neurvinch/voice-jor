@@ -66,3 +66,28 @@ def log_entry(text, emotion , sentiment):
     with open(JOURNAL_FILE, "a") as f:
         f.write(entry);
     print(f"Logged: {entry.strip()}");
+
+def provide_suggestions(emotion,sentiment):
+
+    suggestions = {
+         "sadness": "Try listening to uplifting music or talking to a friend.",
+        "anger": "Take deep breaths or try meditation.",
+        "fear": "Practice grounding techniques or write down your worries.",
+        "joy": "Keep spreading positivity or try something creative!",
+        "love": "Share your positivity or write a gratitude list.",
+        "surprise": "Reflect on what's exciting in your life!"
+    }
+
+    suggestion = suggestions.get(emotion,"Take a moment to reflect on your feelings.")
+
+    if sentiment < -0.2:
+        suggestion += " Consider talking to someone about how you feel."
+
+    elif sentiment > 0.2:
+        suggestion += " Keep up the positive vibes!"
+
+    print(f"Suggestion: {suggestion}");    
+            
+
+def plot_emotions():
+    entries = []            

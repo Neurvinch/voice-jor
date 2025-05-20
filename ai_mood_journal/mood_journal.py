@@ -168,3 +168,8 @@ def main():
                     print(f.read());
             else:
                 print("No journal entries found.");
+            
+        elif choice == "3":
+            plot_emotions();
+
+            

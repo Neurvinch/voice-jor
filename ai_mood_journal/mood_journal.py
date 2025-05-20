@@ -20,3 +20,6 @@ JOURNAL_FILE = "mood_journal.txt";
 
 def record_voice():
     with sr.Microphone() as source:
+        print("Listening... Speak about your day.")
+        recognizer.adjust_for_ambient_noise(source)
+        

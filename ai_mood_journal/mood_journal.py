@@ -27,10 +27,13 @@ def record_voice():
         recognizer.adjust_for_ambient_noise(source)
         audio = recognizer.listen(source, timeout= 5, phrase_time_limit= 10);
         
+        #this does a try ..catch thing
+        # where it uses a company to transcribe audio to text
         try:
             text = recognizer.recognize_amazon(audio);
             print(f"Transcribed: {text}")
             return text;
+    # if it does not go well we 
         except sr.UnknownValueError:
             print("Sorry, I could not understand the audio.");
             return None;

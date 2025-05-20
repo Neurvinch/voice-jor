@@ -46,5 +46,12 @@ def record_voice():
 def detect_emotion(text):
     if not text:
         return "neutral", 0.0;
+
+# this classfiy the emotion based on that text and returns the emotion by labelled
     result = emotion_classifier(text)[0];
     emotion = result['label']
+    
+    # this is a text blob which is ued to get the sentiment of the text like integers value
+    blob = TextBlob(text)
+    sentiment = blob.sentiment.polarity
+    return emotion, sentiment;

@@ -126,7 +126,7 @@ def plot_emotions():
         plt.figure(figsize=(10, 5))
 
         plt.subplot(1, 2, 1)
-        plt.bar(emotion_counts.key(), emotion_counts.values(), color=[...])
+        plt.bar(emotion_counts.keys(), emotion_counts.values(), color=[...])
 
         plt.title("Emotion Distribution")
         plt.xlabel("Emotion")

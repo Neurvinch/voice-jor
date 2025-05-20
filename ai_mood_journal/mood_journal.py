@@ -30,7 +30,7 @@ def record_voice():
         #this does a try ..catch thing
         # where it uses a company to transcribe audio to text
         try:
-            text = recognizer.recognize_amazon(audio);
+            text = recognizer.recognize_google(audio);
             print(f"Transcribed: {text}")
             return text;
     # if it does not go well we use unknow vlaue error and connectio timeout error

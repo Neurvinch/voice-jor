@@ -1,0 +1,4 @@
+[2025-05-20 21:24:43] Emotion: joy, Sentiment: 0.00, Text: how are you
+[2025-05-20 21:25:15] Emotion: anger, Sentiment: 0.00, Text: how r u how r u
+[2025-05-20 21:25:29] Emotion: anger, Sentiment: 0.00, Text: how r u
+[2025-05-20 21:26:14] Emotion: joy, Sentiment: 0.00, Text: hi how are you

@@ -55,3 +55,14 @@ def detect_emotion(text):
     blob = TextBlob(text)
     sentiment = blob.sentiment.polarity
     return emotion, sentiment;
+
+# now lets cook a procedure to save the journal and a  file like log entry;
+
+def log_entry(text, emotion , sentiment):
+
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S");
+    entry = f"[{timestamp}] Emotion: {emotion}, Sentiment: {sentiment:.2f}, Text: {text}\n";
+
+    with open(JOURNAL_FILE, "a") as f:
+        f.write(entry);
+    print(f"Logged: {entry.strip()}");

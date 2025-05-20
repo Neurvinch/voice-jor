@@ -26,3 +26,8 @@ def record_voice():
         # used to make ambident noise to listen
         recognizer.adjust_for_ambient_noise(source)
         audio = recognizer.listen(source, timeout= 5, phrase_time_limit= 10);
+        
+        try:
+            text = recognizer.recognize_amazon(audio);
+            print(f"Transcribed: {text}")
+            return text;

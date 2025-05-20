@@ -90,4 +90,56 @@ def provide_suggestions(emotion,sentiment):
             
 
 def plot_emotions():
-    entries = []            
+    entries = [] 
+    if os.path.exists(JOURNAL_FILE):
+        with open(JOURNAL_FILE,"r") as f:
+            entries = [line.strip() for line in f if line.strip()]           
+
+    if not entries:
+        print("No journal entries found.");
+        return;  
+
+    timestamps , emotions, sentiments = [], [], [];
+
+    emotion_counts = {
+        "sadness": 0,
+        "anger": 0,
+        "fear": 0,
+        "joy": 0,
+        "love": 0,
+        "surprise": 0
+    }
+
+    for entry in entries:
+        try:
+            timestamp = entry.split("]")[0][1:]
+            emotion = entry.split("Emotion: ")[1].split(",")[0]
+            sentiment = float(entry.split("Sentiment: ")[1].split(",")[0])
+            emotions.append(emotion)
+            sentiments.append(sentiment)
+            timestamps.append(timestamp)
+
+            emotion_counts[emotion] += 1
+        except:
+            continue
+
+        plt.figure(figsize=(10, 5))
+
+        plt.subplot(1, 2, 1)
+        plt.bar(emotion_counts.key(), emotion_counts.values(), color=[...])
+
+        plt.title("Emotion Distribution")
+        plt.xlabel("Emotion")
+        plt.ylabel("Count")
+        plt.xticks(rotation=45)
+
+        plt.subplot(1, 2, 2)
+        plt.plot(timestamps, sentiments, marker='o', color='#06D6A0')
+
+        plt.title("Sentiment Over Time")
+        plt.xlabel("Timestamp")
+        plt.ylabel("Sentiment Score")
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.show()
+

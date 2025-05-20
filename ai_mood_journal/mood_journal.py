@@ -19,4 +19,4 @@ JOURNAL_FILE = "mood_journal.txt";
 # now lets cook a recording voice procedure
 
 def record_voice():
-    
+    with sr.Microphone() as source:

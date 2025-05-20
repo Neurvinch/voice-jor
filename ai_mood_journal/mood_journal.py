@@ -45,4 +45,6 @@ def record_voice():
 
 def detect_emotion(text):
     if not text:
-        return "neuteral", 0.0;w
+        return "neutral", 0.0;
+    result = emotion_classifier(text)[0];
+    emotion = result['label']

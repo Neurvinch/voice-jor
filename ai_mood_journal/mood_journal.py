@@ -143,3 +143,28 @@ def plot_emotions():
         plt.tight_layout()
         plt.show()
 
+def main():
+    while True:
+        print("\nAI Voice Mood Journal\n1. Record entry\n2. View entries\n3. Plot emotions\n4. Exit")
+
+        choice = input("choose an option(1-4): ")
+
+        if choice == "1":
+            text = record_voice();
+
+            if text :
+                emotion , sentimnet = detect_emotion(text);
+
+                log_entry(text, emotion, sentimnet);
+
+                provide_suggestions(emotion, sentimnet);
+
+        elif choice == "2":
+
+            if os.path.exists(JOURNAL_FILE):
+
+                with open(JOURNAL_FILE, "r") as f:
+                    print("\nEntries:")
+                    print(f.read());
+            else:
+                print("No journal entries found.");

@@ -33,7 +33,7 @@ def record_voice():
             text = recognizer.recognize_amazon(audio);
             print(f"Transcribed: {text}")
             return text;
-    # if it does not go well we 
+    # if it does not go well we use unknow vlaue error and connectio timeout error
         except sr.UnknownValueError:
             print("Sorry, I could not understand the audio.");
             return None;

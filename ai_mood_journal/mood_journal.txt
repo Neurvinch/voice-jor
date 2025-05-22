@@ -21,3 +21,4 @@
 [2025-05-22 10:24:09] Emotion: sadness, Sentiment: -0.20, Text: missing my
 [2025-05-22 10:24:45] Emotion: joy, Sentiment: 0.00, Text: hi Rupa Aisa Galti
 [2025-05-22 10:57:30] Emotion: joy, Sentiment: 0.00, Text: Yamaha
+[2025-05-22 11:05:09] Emotion: fear, Sentiment: 0.00, Text: I am under the water

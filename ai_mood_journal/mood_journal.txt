@@ -14,3 +14,5 @@
 [2025-05-21 10:06:57] Emotion: joy, Sentiment: 0.00, Text: I am so
 [2025-05-21 10:07:38] Emotion: joy, Sentiment: 1.00, Text: I am very happy
 [2025-05-21 10:07:56] Emotion: sadness, Sentiment: 0.00, Text: I am feeling very low
+[2025-05-22 09:13:14] Emotion: joy, Sentiment: 0.35, Text: hey buddy cool
+[2025-05-22 09:16:07] Emotion: joy, Sentiment: 0.00, Text: can you please teach me pustak

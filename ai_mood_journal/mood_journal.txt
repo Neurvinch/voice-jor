@@ -16,3 +16,7 @@
 [2025-05-21 10:07:56] Emotion: sadness, Sentiment: 0.00, Text: I am feeling very low
 [2025-05-22 09:13:14] Emotion: joy, Sentiment: 0.35, Text: hey buddy cool
 [2025-05-22 09:16:07] Emotion: joy, Sentiment: 0.00, Text: can you please teach me pustak
+[2025-05-22 10:23:32] Emotion: joy, Sentiment: 1.00, Text: best actor in Tamil Nadu
+[2025-05-22 10:23:51] Emotion: anger, Sentiment: 0.20, Text: I am very upset today because
+[2025-05-22 10:24:09] Emotion: sadness, Sentiment: -0.20, Text: missing my
+[2025-05-22 10:24:45] Emotion: joy, Sentiment: 0.00, Text: hi Rupa Aisa Galti
